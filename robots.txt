@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ruheyun.github.io/blogs/sitemap.xml
