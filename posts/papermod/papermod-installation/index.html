@@ -10,12 +10,12 @@
 <meta name="description" content="Read aboout Install and Update instructions and sampled configuration templates">
 <meta name="author" content="Aditya Telange">
 <link rel="canonical" href="https://ruheyun.github.io/blogs/posts/papermod/papermod-installation/">
-<link crossorigin="anonymous" href="/blogs/assets/css/stylesheet.31f4132a2294f1e65473d35247f033434cb9dd6a137282653a99e81b00af7db8.css" integrity="sha256-MfQTKiKU8eZUc9NSR/AzQ0y53WoTcoJlOpnoGwCvfbg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/blogs/assets/css/stylesheet.4570fd2eb17093d4cf7d940445d02249d88b25d0c2b5cf9e2c061d7550a34121.css" integrity="sha256-RXD9LrFwk9TPfZQERdAiSdiLJdDCtc&#43;eLAYddVCjQSE=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://ruheyun.github.io/blogs/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ruheyun.github.io/blogs/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://ruheyun.github.io/blogs/favicon-32x32.png">
 <link rel="apple-touch-icon" href="https://ruheyun.github.io/blogs/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ruheyun.github.io/blogs/safari-pinned-tab.svg">
+<link rel="mask-icon" href="https://ruheyun.github.io/blogs/favicon-16x16.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" hreflang="zh" href="https://ruheyun.github.io/blogs/posts/papermod/papermod-installation/">
@@ -203,7 +203,7 @@
     <h1 class="post-title entry-hint-parent">
       Install / Update PaperMod
     </h1>
-    <div class="post-meta"><span title='2021-01-20 00:00:00 +0000 UTC'>一月 20, 2021</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Aditya Telange&nbsp;|&nbsp;<a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content/posts/papermod/papermod-installation.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta"><span title='2021-01-20 00:00:00 +0000 UTC'>2021-01-20</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Aditya Telange&nbsp;|&nbsp;<a href="https://github.com/ruheyun/blogs/discussions/posts/papermod/papermod-installation.md" rel="noopener noreferrer" target="_blank">建议更改</a>
 
 </div>
   </header> 
@@ -212,51 +212,149 @@
             sizes="(min-width: 768px) 720px, 100vw" src="https://ruheyun.github.io/blogs/images/papermod-cover.png" alt="" 
             width="1200" height="628">
         
-</figure><div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">目录</span>
-        </summary>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+            <summary accesskey="c" title="(Alt + C)">
+                <span class="details">目录</span>
+            </summary>
 
-        <div class="inner"><ul>
-                <li>
-                    <a href="#getting-started-" aria-label="Getting Started 🚀">Getting Started 🚀</a><ul>
-                        
-                <li>
-                    <a href="#installingupdating-papermod" aria-label="Installing/Updating PaperMod">Installing/Updating PaperMod</a></li>
-                <li>
-                    <a href="#finally-set-theme-as-papermod-in-your-site-config" aria-label="Finally set theme as PaperMod in your site config">Finally set theme as PaperMod in your site config</a></li>
-                <li>
-                    <a href="#next-up---customizing-papermod-to-suit-your-preferences" aria-label="Next up - Customizing PaperMod to suit your preferences.">Next up - Customizing PaperMod to suit your preferences.</a></li></ul>
-                </li>
-                <li>
-                    <a href="#support-" aria-label="Support 🫶">Support 🫶</a></li>
-                <li>
-                    <a href="#videos-featuring-papermod" aria-label="Videos featuring PaperMod">Videos featuring PaperMod</a></li>
-                <li>
-                    <a href="#quick-links" aria-label="Quick Links">Quick Links</a><ul>
-                        
-                <li>
-                    <a href="#papermod---features" aria-label="Papermod - Features">Papermod - Features</a></li>
-                <li>
-                    <a href="#papermod---faqs" aria-label="Papermod - FAQs">Papermod - FAQs</a></li>
-                <li>
-                    <a href="#papermod---variables" aria-label="Papermod - Variables">Papermod - Variables</a></li>
-                <li>
-                    <a href="#papermod---icons" aria-label="Papermod - Icons">Papermod - Icons</a></li>
-                <li>
-                    <a href="#changelog" aria-label="ChangeLog">ChangeLog</a></li></ul>
-                </li>
-                <li>
-                    <a href="#sample-hugoyaml" aria-label="Sample hugo.yaml">Sample hugo.yaml</a></li>
-                <li>
-                    <a href="#sample-pagemd" aria-label="Sample Page.md">Sample Page.md</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
+            <div class="inner"><ul>
+                    <li>
+                        <a href="#getting-started-" aria-label="Getting Started 🚀">Getting Started 🚀</a><ul>
+                            
+                    <li>
+                        <a href="#installingupdating-papermod" aria-label="Installing/Updating PaperMod">Installing/Updating PaperMod</a></li>
+                    <li>
+                        <a href="#finally-set-theme-as-papermod-in-your-site-config" aria-label="Finally set theme as PaperMod in your site config">Finally set theme as PaperMod in your site config</a></li>
+                    <li>
+                        <a href="#next-up---customizing-papermod-to-suit-your-preferences" aria-label="Next up - Customizing PaperMod to suit your preferences.">Next up - Customizing PaperMod to suit your preferences.</a></li></ul>
+                    </li>
+                    <li>
+                        <a href="#support-" aria-label="Support 🫶">Support 🫶</a></li>
+                    <li>
+                        <a href="#videos-featuring-papermod" aria-label="Videos featuring PaperMod">Videos featuring PaperMod</a></li>
+                    <li>
+                        <a href="#quick-links" aria-label="Quick Links">Quick Links</a><ul>
+                            
+                    <li>
+                        <a href="#papermod---features" aria-label="Papermod - Features"><a href="../papermod-features">Papermod - Features</a></a></li>
+                    <li>
+                        <a href="#papermod---faqs" aria-label="Papermod - FAQs"><a href="../papermod-how-to">Papermod - FAQs</a></a></li>
+                    <li>
+                        <a href="#papermod---variables" aria-label="Papermod - Variables"><a href="../papermod-variables">Papermod - Variables</a></a></li>
+                    <li>
+                        <a href="#papermod---icons" aria-label="Papermod - Icons"><a href="../papermod-icons">Papermod - Icons</a></a></li>
+                    <li>
+                        <a href="#changelog" aria-label="ChangeLog"><a href="https://github.com/adityatelange/hugo-PaperMod/releases">ChangeLog</a></a></li></ul>
+                    </li>
+                    <li>
+                        <a href="#sample-hugoyaml" aria-label="Sample hugo.yaml">Sample <code>hugo.yaml</code></a></li>
+                    <li>
+                        <a href="#sample-pagemd" aria-label="Sample Page.md">Sample <code>Page.md</code></a>
+                    </li>
+                </ul>
+            </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    
+    document.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+    
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        if (elements.length > 0) {
+            
+            activeElement = elements[0];
+            const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+            document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+        }
+    
+        
+        const topLink = document.getElementById('top-link');
+        if (topLink) {
+            topLink.addEventListener('click', (event) => {
+                
+                event.preventDefault();
+    
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    }, false);
+    
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+    
+    window.addEventListener('scroll', () => {
+        
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+        
+        if (scrollPosition === 0) {
+            return;
+        }
+    
+        
+        if (elements && elements.length > 0) {
+            
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - scrollPosition) > 0 && 
+                    (getOffsetTop(element) - scrollPosition) < window.innerHeight / 2) {
+                    return element;
+                }
+            }) || activeElement;
+    
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                const tocLink = document.querySelector(`.inner ul li a[href="#${id}"]`);
+                if (element === activeElement){
+                    tocLink.classList.add('active');
+    
+                    
+                    const tocContainer = document.querySelector('.toc .inner');
+                    const linkOffsetTop = tocLink.offsetTop;
+                    const containerHeight = tocContainer.clientHeight;
+                    const linkHeight = tocLink.clientHeight;
+    
+                    
+                    const scrollPosition = linkOffsetTop - (containerHeight / 2) + (linkHeight / 2);
+                    tocContainer.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+                } else {
+                    tocLink.classList.remove('active');
+                }
+            });
+        }
+    }, false);
+    
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+    
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+    
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+    
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+    
+</script>
   <div class="post-content"><blockquote>
 <ul>
 <li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, it is recommend to use <code>yaml</code> over <code>toml</code> as it is easier to read.</strong></li>
@@ -701,12 +799,27 @@ Read more about git submodules <a href="https://www.atlassian.com/git/tutorials/
     </li>
 </ul>
 
-  </footer>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="ruheyun/blogs"
+        data-repo-id="R_kgDORIZ-OA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORIZ-OM4C13mn"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
 </article>
     </main>
     
 <footer class="footer">
-        <span>© <a href="https://ruheyun.github.io/blogs/">RuHeYun</a></span> · 
+        <span>© <a href="https://ruheyun.github.io/">RuHeYun</a></span> · 
 
     <span>
         Powered by
