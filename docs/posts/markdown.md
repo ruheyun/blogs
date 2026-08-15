@@ -34,17 +34,25 @@
 
 <u>hello world!</u>
 
-`字体下标表示用：H~2~o`
+`字体下标表示用：H~2~o` `部分markdown不能解析，需使用 H<sub>2</sub>o`
 
 H~2~o
 
-`字体上标表示用：n^2^`
+H<sub>2</sub>o
+
+`字体上标表示用：n^2^` `部分markdown不能解析，需使用 n<sup>2</sup>`
 
 n^2^
 
-`字体高亮用：==字体内容==`
+n<sup>2</sup>
+
+`字体高亮用：==字体内容==` `部分markdown不能解析，需使用 <mark>hello world!</mark>`
 
 ==hello world!==
+
+<mark>hello world!</mark>
+
+> 后三个语法，在部分markdown解析器里不能解析，比如 docsify 中，需要使用 Html 语法
 
 ## 表情符号
 
