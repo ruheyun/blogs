@@ -101,3 +101,15 @@ section.cover p a:first-child {
 
 /* 固定导航栏 */
 
+
+/* ========== 页脚 ========== */
+.site-footer {
+  margin-top: 56px;
+  padding: 24px 0 8px;
+  border-top: 1px solid #edf1f7;
+  text-align: center;
+  color: #8a94a6;
+  font-size: 13px;
+}
+.site-footer p { margin: 4px 0; }
+.site-footer a { color: #5b8def; }

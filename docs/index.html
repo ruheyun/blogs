@@ -11,6 +11,7 @@
     
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/docsify-giscus@1.0.0/dist/giscus.css">
     <link rel="stylesheet" href="static/custom.css">
 </head>
 
@@ -40,20 +41,43 @@
                 namespace: 'Ruheyun',
             },
             auto2top: true,
+            giscus:{
+                repo: "ruheyun/blogs",
+                repoId: "R_kgDOSbTqiA",
+                category: "Announcements",
+                categoryId: "DIC_kwDOSbTqiM4DDa73",
+                mapping: "url",
+                reactionsEnabled: "0",
+                strict: "1",
+                emitMetadata: "0",
+                inputPosition: "bottom",
+                theme: "light",
+                lang: "zh-CN",
+                loading: "lazy",
+            },
             formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
             plugins: [
                 function(hook, vm) {
-                    hook.beforeEach(function(html) {
+                    // hook.beforeEach(function(html) {
 
-                        const file = vm.route.file || '';
+                    //     const file = vm.route.file || '';
 
-                        if (file.includes('posts/')) {
-                            html += '\n\n----\n\n> 🕒 本文最后更新：{docsify-updated}';
-                        }
-                        return html;
+                    //     if (file.includes('posts/')) {
+                    //         html += '\n\n----\n\n> 🕒 本文最后更新：{docsify-updated}';
+                    //     }
+                    //     return html;
+                    // });
+
+                    hook.afterEach(function(html) {
+                        return html + `
+                            <footer class="site-footer">
+                                <p>© 2022 - ${new Date().getFullYear()} Ruheyun. All rights reserved.</p>
+                            </footer>
+                            `
                     });
                 }
-            ]
+            ],
+            
         }
     </script>
     
@@ -62,6 +86,7 @@
     <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="https://unpkg.com/docsify-giscus@1.0.0/dist/docsify-giscus.min.js"></script>
 </body>
 
 </html>

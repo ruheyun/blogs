@@ -1,7 +1,5 @@
-<div class="card">
-    <h3>🌱 关于小站</h3>
-    <p>Docsify + GitHub Pages 搭建，持续装修中…</p>
-</div>
+# 🌱 关于小站
+<p>Docsify + GitHub Pages 搭建，持续装修中…</p>
 
 ## 🚧 建站进度
 
