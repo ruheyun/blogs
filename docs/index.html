@@ -5,88 +5,278 @@
     <title>个人博客</title>
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    
+
     <link rel="icon" href="static/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
-    
+
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/docsify-giscus@1.0.0/dist/giscus.css">
     <link rel="stylesheet" href="static/custom.css">
 </head>
 
 <body class="loading">
-    <div id="app"></div>
-    
-    <script>
-        window.$docsify = {
-            name: 'Ruheyun',
-            repo: 'https://github.com/ruheyun',
-            loadSidebar: true,
-            alias: {
-                '/.*/_sidebar.md': '/_sidebar.md',
-            },
-            loadNavbar: true,
-            coverpage: true,
-            onlyCover: true,
-            subMaxLevel: 3,
-            mergeNavbar: true,
-            search: {
-                maxAge: 86400000,
-                paths: 'auto',
-                placeholder: '搜索',              
-                noData: '找不到结果',
-                depth: 4,
-                hideOtherSidebarContent: false,
-                namespace: 'Ruheyun',
-            },
-            auto2top: true,
-            giscus:{
-                repo: "ruheyun/blogs",
-                repoId: "R_kgDOSbTqiA",
-                category: "Announcements",
-                categoryId: "DIC_kwDOSbTqiM4DDa73",
-                mapping: "url",
-                reactionsEnabled: "0",
-                strict: "1",
-                emitMetadata: "0",
-                inputPosition: "bottom",
-                theme: "light",
-                lang: "zh-CN",
-                loading: "lazy",
-            },
-            formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
-            plugins: [
-                function(hook, vm) {
-                    // hook.beforeEach(function(html) {
 
-                    //     const file = vm.route.file || '';
+<div id="app"></div>
 
-                    //     if (file.includes('posts/')) {
-                    //         html += '\n\n----\n\n> 🕒 本文最后更新：{docsify-updated}';
-                    //     }
-                    //     return html;
-                    // });
+<script>
 
-                    hook.afterEach(function(html) {
-                        return html + `
-                            <footer class="site-footer">
-                                <p>© 2022 - ${new Date().getFullYear()} Ruheyun. All rights reserved.</p>
-                            </footer>
-                            `
-                    });
-                }
-            ],
-            
-        }
-    </script>
-    
-    <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/emoji.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <script src="https://unpkg.com/docsify-giscus@1.0.0/dist/docsify-giscus.min.js"></script>
+    window.$docsify = {
+
+        name: 'Ruheyun',
+        repo: 'https://github.com/ruheyun',
+
+        loadSidebar: true,
+
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md',
+        },
+
+        loadNavbar: true,
+
+        coverpage: true,
+        onlyCover: true,
+
+        subMaxLevel: 3,
+        mergeNavbar: true,
+
+        search: {
+            maxAge: 86400000,
+            paths: 'auto',
+            placeholder: '搜索',
+            noData: '找不到结果',
+            depth: 4,
+            hideOtherSidebarContent: false,
+            namespace: 'Ruheyun',
+        },
+
+        auto2top: true,
+
+        formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+
+
+        /*
+         * =====================================================
+         * Plugins
+         * =====================================================
+         */
+
+        plugins: [
+
+            function(hook, vm) {
+
+
+                /*
+                 * =================================================
+                 * 页脚
+                 * =================================================
+                 */
+
+                hook.afterEach(function(html) {
+
+                    return html + `
+                        <footer class="site-footer">
+                            <p>
+                                © 2022 - ${new Date().getFullYear()}
+                                Ruheyun. All rights reserved.
+                            </p>
+                        </footer>
+                    `;
+
+                });
+
+
+                /*
+                 * =================================================
+                 * Giscus
+                 * =================================================
+                 */
+
+                hook.doneEach(function() {
+
+                    // 当前页面
+                    const file = vm.route.file || '';
+
+                    /*
+                     * 只有「留言板.md」加载 Giscus
+                     *
+                     * 其他页面直接返回
+                     */
+                    if (file !== 'static/discuss.md') {
+                        return;
+                    }
+
+
+                    // 找到留言板中的 Giscus 容器
+                    const container =
+                        document.querySelector('#giscus-comments');
+
+                    if (!container) {
+                        return;
+                    }
+
+
+                    // 防止重复加载
+                    if (container.querySelector('.giscus')) {
+                        return;
+                    }
+
+
+                    /*
+                     * 创建 Giscus
+                     */
+                    const script =
+                        document.createElement('script');
+
+
+                    script.src =
+                        'https://giscus.app/client.js';
+
+
+                    /*
+                     * GitHub 仓库
+                     */
+                    script.setAttribute(
+                        'data-repo',
+                        'ruheyun/blogs'
+                    );
+
+
+                    /*
+                     * Repository ID
+                     */
+                    script.setAttribute(
+                        'data-repo-id',
+                        'R_kgDOSbTqiA'
+                    );
+
+
+                    /*
+                     * Discussion 分类
+                     */
+                    script.setAttribute(
+                        'data-category',
+                        'Announcements'
+                    );
+
+
+                    /*
+                     * Discussion Category ID
+                     */
+                    script.setAttribute(
+                        'data-category-id',
+                        'DIC_kwDOSbTqiM4DDa73'
+                    );
+
+
+                    /*
+                     * 评论对应方式
+                     */
+                    script.setAttribute(
+                        'data-mapping',
+                        'url'
+                    );
+
+
+                    /*
+                     * 严格匹配
+                     */
+                    script.setAttribute(
+                        'data-strict',
+                        '1'
+                    );
+
+
+                    /*
+                     * 不显示 reaction
+                     */
+                    script.setAttribute(
+                        'data-reactions-enabled',
+                        '0'
+                    );
+
+
+                    /*
+                     * 不发送 metadata
+                     */
+                    script.setAttribute(
+                        'data-emit-metadata',
+                        '0'
+                    );
+
+
+                    /*
+                     * 输入框放在评论下面
+                     */
+                    script.setAttribute(
+                        'data-input-position',
+                        'bottom'
+                    );
+
+
+                    /*
+                     * 主题
+                     */
+                    script.setAttribute(
+                        'data-theme',
+                        'light'
+                    );
+
+
+                    /*
+                     * 中文
+                     */
+                    script.setAttribute(
+                        'data-lang',
+                        'zh-CN'
+                    );
+
+
+                    /*
+                     * 延迟加载
+                     */
+                    script.setAttribute(
+                        'data-loading',
+                        'lazy'
+                    );
+
+
+                    script.setAttribute(
+                        'crossorigin',
+                        'anonymous'
+                    );
+
+
+                    script.async = true;
+
+
+                    /*
+                     * 把 Giscus 放入留言板
+                     */
+                    container.appendChild(script);
+
+                });
+
+            }
+
+        ]
+
+    };
+
+</script>
+
+
+<!-- Docsify -->
+
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/emoji.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+
 </body>
-
 </html>
