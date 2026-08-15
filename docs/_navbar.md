@@ -1,5 +1,6 @@
 <!-- _navbar.md -->
-
-- 友链
-  - [Docsify](https://docsify.js.org/#/)
-  - [博客园](https://www.cnblogs.com/)
+- [首页](/home.md)
+- [归档](/static/archives.md)
+- [关于](/static/about.md)
+- [友链](/static/links.md)
+  
