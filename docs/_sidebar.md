@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 <!-- - [Home](/README.md)   -->
-- [阅读推荐](/posts/readbook.md)
+- [阅读书单](/posts/readbook.md)
 - [常用数学公式](/posts/math.md)
 - [Markdown语法](/posts/markdown.md)
 - [Git命令](/posts/git.md)

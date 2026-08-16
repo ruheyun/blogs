@@ -1,3 +1,4 @@
+# 数学公式
 
 ## 泰勒展开式
 定理：
@@ -48,7 +49,9 @@ $$
 $$
 注：在物理学、统计学和机器学习中，==温度参数==（通常记为 $\epsilon$ 或 $T$ ）是一个调节系统“确定性”与“随机性”的控制变量。它借用了热力学中“温度”的概念：温度越高，系统越混乱（随机）；温度越低，系统越冷凝（倾向于最大值）。
 
-## 赫尔德不等式（Holder’s inequality）
+## 赫尔德不等式
+Holder’s inequality
+
 本质理解：
 两个函数乘积的积分，不会超过它们各自"大小"的乘积
 定义：
@@ -62,7 +65,9 @@ $$
 $$
 当 $p = q = 2$ 时，赫尔德不等式变为`柯西-施瓦茨不等式`。
 
-## 琴生不等式（Jensen's inequality）
+## 琴生不等式
+Jensen's inequality
+
 简单理解：
 对一平均做凸函数变换，会小于等于先做凸函数变换再平均。
 基本性质：
@@ -70,9 +75,12 @@ $$
 $$
 t f(x_1) + (1 - t) f(x_2) \geq f(tx_1 + (1 - t)x_2), \quad 0 \leq t \leq 1.
 $$
-![[Convex-function-graph-1.png|528]]
 
-## 蒙特卡洛（Monte Carlo）
+![Convex-function-graph-1.png](../assets/math1.png)
+
+## 蒙特卡洛
+Monte Carlo
+
 例子：$x$ 是一维随机变量，$p(x)$ 是 $x$ 的概率密度，$f(x)$ 是 $x$ 的标量函数，求 $f(x)$ 的期望：
 $$
 \mathbb{E}_p[f(x)] = \int p(x)f(x)dx
@@ -138,7 +146,8 @@ $$M = \frac{P + Q}{2}$$
 
 $$D_F (P \parallel Q) = E_P [\parallel \nabla_x log p(x) - \nabla_x log q(x) \parallel^2]$$
 
-## Wasserstein Distance（Earth Mover Distance）
+## Wasserstein Distance
+Earth Mover Distance
 
 地球移动距离（推土机距离）：把P看作一堆土，Q看作目标土堆，将P搬运到Q的最小搬运成本。
 
