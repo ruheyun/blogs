@@ -53,7 +53,7 @@ conda activate base
 
 需要先退出要删除的环境，再用下面命令
 ```
-conda env remove -n name --all
+conda env remove -n name
 ```
 或者
 ```

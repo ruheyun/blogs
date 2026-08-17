@@ -7,4 +7,5 @@
 - [Git命令](/posts/git.md)
 - [Conda笔记](/posts/conda.md)
 - [Jupyter安装](/posts/jupyter.md)
+- [Pytorch笔记](/posts/torch.md)
    
