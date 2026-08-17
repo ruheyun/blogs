@@ -1,9 +1,8 @@
 # Pytorch笔记
 
-`Pytorch官网`: 
-https://pytorch.org/get-started/locally/
-`历史版本网站`：
-https://pytorch.org/get-started/previous-versions/
+[Pytorch官网](https://pytorch.org/get-started/locally/)
+
+[历史版本网站](https://pytorch.org/get-started/previous-versions/)
 
 ## torch安装
 这里以历史版本 `2.5.1` 为例，进入历史版本网站，找到 `v2.5.1`，复制命令安装即可

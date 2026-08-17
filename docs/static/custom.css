@@ -113,3 +113,64 @@ section.cover p a:first-child {
 }
 .site-footer p { margin: 4px 0; }
 .site-footer a { color: #5b8def; }
+
+
+/* ================= 复制按钮美化 ================= */
+
+/* 1. 基础样式 (未点击时的样子) */
+.docsify-copy-code-button {
+    background: rgba(0, 0, 0, .3) !important; /* 半透明黑底，低调不抢眼 */
+    color: #fff !important;
+    border-radius: 4px !important;            /* 微圆角 */
+    top: 6px !important;                      /* 距离右上角一点距离 */
+    right: 6px !important;
+    padding: 4px 12px !important;
+    font-size: 12px !important;
+    transition: background 0.1s ease !important; /* 颜色过渡动画 */
+}
+
+/* 把提示框从“绝对定位”改回“正常文档流”，防止被代码块裁剪 */
+.docsify-copy-code-button > .success,
+.docsify-copy-code-button > .error {
+    position: static !important;
+    transform: none !important;
+    right: auto !important;
+    top: auto !important;
+    z-index: auto !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    display: none !important; /* 默认隐藏，不占空间 */
+}
+
+/* 3. 成功状态：按钮变绿，文字变成“已复制” */
+.docsify-copy-code-button.success {
+    background: #42b983 !important; /* Docsify 经典绿，你可以改成任何你喜欢的颜色 */
+}
+  
+/* 成功时：隐藏默认的“复制”文字，显示“已复制”文字 */
+.docsify-copy-code-button.success > span:not(.success):not(.error) {
+    display: none !important;
+}
+.docsify-copy-code-button.success > .success {
+    opacity: 1 !important;
+    display: inline-block !important;
+    background: transparent !important;
+    color: #fff !important;
+}
+
+/* 4. 失败状态 (同理，变成红色并显示“错误”) */
+.docsify-copy-code-button.error {
+    background: #e74c3c !important;
+}
+.docsify-copy-code-button.error > span:not(.success):not(.error) {
+    display: none !important;
+}
+.docsify-copy-code-button.error > .error {
+    opacity: 1 !important;
+    display: inline-block !important;
+    background: transparent !important;
+    color: #fff !important;
+}
+.docsify-copy-code-button > span {
+  background: transparent !important;
+}
