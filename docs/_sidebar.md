@@ -13,4 +13,5 @@
   - [基础语法](/posts/python-02.md)
   - [数据类型](/posts/python-03.md)
   - [数字类型](/posts/python-04.md)
+  - [字符串](/posts/python-05.md)
    
