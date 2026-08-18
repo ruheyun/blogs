@@ -13,7 +13,9 @@ pip install ipykernel
 ```
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
+
 参数解释：
+
 `python -m ipykernel` 以模块方式运行 `ipykernel` 
 
 `install` 注册一个内核到 `jupyter` 中
@@ -42,3 +44,22 @@ jupyter notebook  # 打开jupyter
 jupyter kernelspec remove myenv
 ```
 这个命令里，`myenv` 是注册内核时对应的 `--name` 的参数设置。注意这里只是删除内核，上述安装的包，以及环境都没有删除。
+
+
+## 转换md文件
+
+需要先安装两个依赖包
+```
+pip install nbconvert pandoc
+```
+
+然后使用下面命令即可
+```
+jupyter nbconvert --to <format> <notebook>.ipynb
+```
+
+> [!tip]
+> 1. format: 需要转换的格式，比如 markdown、html、py
+> 2. notebook: 替换为你 jupyter notebook 的名字
+> 3. 会在当前文件夹下生成文档
+

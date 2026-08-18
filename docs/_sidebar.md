@@ -8,4 +8,7 @@
 - [Conda笔记](/posts/conda.md)
 - [Jupyter安装](/posts/jupyter.md)
 - [Pytorch笔记](/posts/torch.md)
+- Python基础
+  - [python规范](/posts/python-01.md)
+  - [基础语法](/)
    
