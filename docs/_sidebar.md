@@ -9,6 +9,8 @@
 - [Jupyter安装](/posts/jupyter.md)
 - [Pytorch笔记](/posts/torch.md)
 - Python基础
-  - [python规范](/posts/python-01.md)
-  - [基础语法](/)
+  - [代码规范](/posts/python-01.md)
+  - [基础语法](/posts/python-02.md)
+  - [数据类型](/posts/python-03.md)
+  - [数字类型](/posts/python-04.md)
    
