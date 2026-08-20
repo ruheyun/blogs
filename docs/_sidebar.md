@@ -15,4 +15,5 @@
   - [数字类型](/posts/python-04.md)
   - [字符串](/posts/python-05.md)
   - [列表](/posts/python-06.md)
+  - [元组](/posts/python-07.md)
    
