@@ -16,4 +16,6 @@
   - [字符串](/posts/python-05.md)
   - [列表](/posts/python-06.md)
   - [元组](/posts/python-07.md)
+  - [字典](/posts/python-08.md)
+  - [集合](/posts/python-09.md)
    
