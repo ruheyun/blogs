@@ -28,3 +28,4 @@
 
 > 如果在安装过程中更改了默认安装路径，则这里的内容也应改为对应的路径。
 
+参考教程：https://yapwn.com/archives/MIT-GNU-Scheme-%E5%AE%89%E8%A3%85/
