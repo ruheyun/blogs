@@ -1,7 +1,8 @@
 # MIT/GNU Scheme 安装
 
-本安装笔记记录了 `MIT/GNU Scheme` 在 Windows11 下的安装过程。
+本安装笔记记录了 `MIT/GNU Scheme` 在 `Windows11` 以及 `子系统wsl` 下的安装过程。
 
+## Windows安装
 **1.下载exe版本安装包**
 
 由于[官网](https://www.gnu.org/software/mit-scheme/)最新版本不再支持 Windows 系统，因此需要去下载老版本的安装包：[历史版本](https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/)。
@@ -29,3 +30,36 @@
 > 如果在安装过程中更改了默认安装路径，则这里的内容也应改为对应的路径。
 
 参考教程：https://yapwn.com/archives/MIT-GNU-Scheme-%E5%AE%89%E8%A3%85/
+
+
+## WSL安装
+
+进入子系统，按次序输入以下命令即可
+
+```
+sudo apt update
+```
+
+```
+sudo apt install mit-scheme
+```
+
+> 使用 sudo 命令会要求输入子系统密码
+> 使用上述命令安装的 scheme 是官网最新版本的
+
+**使用**
+
+输入命令
+
+```
+mit-scheme
+```
+
+即可进入 `scheme` 的交互式命令行，可直接输入 `scheme` 语法，或者加载 `scm` 文件运行。
+
+退出 `scheme` 交互模式，输入下面命令
+
+```
+(exit)
+```
+
