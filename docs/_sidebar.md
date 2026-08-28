@@ -9,6 +9,6 @@
 - [Jupyter安装](/posts/jupyter.md)
 - [Pytorch笔记](/posts/torch.md)
 - [Python基础](/posts/python/contents.md)
-- [Scheme安装](/posts/scheme.md)
+- [Scheme基础](/posts/scheme/contents.md)
 
    

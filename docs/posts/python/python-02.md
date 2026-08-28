@@ -40,9 +40,22 @@ print('hello', sep='', end='-->')
 print('world')
 ```
 
-> please input age: 15
->
-> ruhe 15
->
-> hello-->world
+```output
+please input age: 15
+
+ruhe 15
+
+hello-->world
+```
     
+```python
+print(print(1), print(2))
+```
+
+```output
+1
+2
+None None
+```
+
+> 这是个比较有意思的例子，print 在 python 里是一个无返回的函数，详细解析会在函数部分讲解。
