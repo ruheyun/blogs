@@ -10,4 +10,5 @@ MIT/GNU Scheme 是一种 **Scheme 编程语言的实现**，由 MIT 等机构维
 **目录列表**
 
 - [scheme安装](/posts/scheme/scheme.md)
+- [初识](/posts/scheme/scheme-01.md)
 
